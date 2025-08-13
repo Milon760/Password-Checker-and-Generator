@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="bn">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Password Checker & Generator </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="creatorBox">
+      <h1>Password Checker & Generator </h1>
+      <p class="creator"> Made with ♥ by Milon </p>
+    </div>
+
+    <label for="pwd"> Password : </label>
+    <div class="input">
+      <input id="pwd" type="password" placeholder="Enter password" minlength="6" maxlength="16" />
+      <button id="togglePwd" class="btn" aria-label="Toggle password visibility"> Show </button>
+    </div>
+    <div id="warning"></div>
+
+    <div class="actions">
+
+      <input id="lengthInput" class="lengthInput" type="number" min="6" max="16" value="8" style="width: 70px;" />
+      <button id="genBtn" class="btn"> Generate Password </button>
+      <button id="copyBtn" class="btn"> Copy </button>
+      <button id="clearBtn" class="btn"> Clear </button>
+      <div class="copy-tip" id="copyTip"></div>
+
+    </div>
+
+    <p id="lenInfo" style="font-size:15px; color:var(--muted); margin-top:5px; margin-top: 5px;"> Length: 0 </p>
+
+    <div class="meter"><i id="meterBar"></i></div>
+
+    <div class="requirements">
+
+      <div class="req"><span id="rLen" class="dot bad">✕</span> Minimum 8 characters</div>
+      <div class="req"><span id="rUpper" class="dot bad">✕</span> Uppercase (A-Z)</div>
+      <div class="req"><span id="rLower" class="dot bad">✕</span> Lowercase (a-z)</div>
+      <div class="req"><span id="rNumber" class="dot bad">✕</span> Number (0-9)</div>
+      <div class="req"><span id="rSpecial" class="dot bad">✕</span> Special (!@#$%)</div>
+
+    </div>
+
+    <div id="previewBox">—</div>
+
+  </div>
+<script src="script.js"></script>
+
+</body>
+
+</html>
